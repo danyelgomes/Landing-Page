@@ -7,8 +7,7 @@
 
 body {
     font-family: Arial, Helvetica, sans-serif;
-    background: #000000dc url(77d0a7c454e658833800528e748edbe9.png) no-repeat center fixed;
-
+    background: #232323;
     height: 100vh;
     background-position-x: 40vw;
     color: white;
@@ -17,19 +16,21 @@ body {
 header {
     color: white;
     display: flex;
-    flex-flow: row nowrap;
     justify-content: space-between;
+    flex-flow: row nowrap;
 }
 
 header h1 {
-    width: 50px;
+    width: 170px;
+    height: 50px;
     margin: 50px 10px 10px 150px;
     font-weight: 100;
     font-size: 2.5em;
 }
 
 header nav {
-    margin-right: 100px;
+    margin-right: 50px;
+    display: flex;
 }
 
 header ul {
@@ -56,15 +57,17 @@ header a:hover {
     background-color: lightgray;
     color: black;
 }
-header a.purple {
-    border: 1px solid rgb(163, 3, 255);
+
+article {
+    display: flex;
+    justify-content: space-between;
 }
 
 article h1 {
     font-size: 3em;
     width: 400px;
     color: blueviolet;
-    margin: 100px 100px 0px 200px;
+    margin: 100px 100px 0px 150px;
     line-height: 50px;
 } 
 article h1 span {
@@ -72,16 +75,16 @@ article h1 span {
 }
 article p {
     width: 400px;
-    margin: 30px 100px 100px 200px;
+    margin: 30px 100px 100px 150px;
 }
 
 form input {
     display: block;
-    margin: 20px 200px;
+    margin: 20px 150px;
     border-radius: 15px;
     padding: 15px;
     width: 300px;
-    border: none
+    outline: none
     
 }
 
@@ -92,4 +95,60 @@ input[type=submit], input[type=submit]::placeholder {
     width: 200px;
     font-family: Arial, Helvetica, sans-serif;
     cursor: pointer;
+}
+
+div.img {
+    margin-top: 60px;
+}
+header div {
+    display: none;
+}
+i#icon {
+    display: none;
+    width: 0px;
+    cursor: pointer;
+}
+
+@media (max-width: 1289px) {
+    header {
+        width: 100%;
+    }
+    header nav {
+        display: none;
+        margin: 180px 0px 0px 0px;
+
+    }
+    header nav ul li {
+        background-color: rgb(61, 61, 61);
+        width: 70%;
+        margin: 10px 0px 0px 0px;
+        padding: 0;
+    }
+    header nav ul li a {
+        width: 100%;
+        display: block;
+        margin: 0 auto;
+    }
+    header div {
+        display: block;
+    }
+    i#icon {
+        display: block;
+        font-size: 4em;
+        height: 64px;
+    }
+    nav ul {
+        flex-flow: column wrap;
+    }
+    div.img{
+        display: none;
+    }
+}
+@media (min-width: 1290px) {
+    nav {
+        display: block !important;
+    }
+    header a.purple {
+    border: 1px solid rgb(163, 3, 255);
+}
 }

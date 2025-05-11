@@ -1,10 +1,11 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Purple Landing Page</title>
     <link rel="stylesheet" href="style.css">
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
     <header>
@@ -18,16 +19,25 @@
                 <li><a href="#" class="purple">Já tem uma conta?</a></li>
             </ul>
         </nav>
+        <div>
+            <i id="icon" class='bx bx-menu' onclick="openMenu()"></i>
+        </div>
     </header>
     <article>
-        <h1>Increva-se agora <span>na Newslatter</span></h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae mollitia nostrum maxime obcaecati, perspiciatis minus veritatis non totam commodi dignissimos asperiores placeat rerum, vitae delectus doloremque, illum ipsa impedit eaque.
-        </p>
-        <form action="form.php">
-            <input type="text" name="nome" id="inome" minlength="3" maxlength="10" placeholder="Nome">
-            <input type="email" name="email" id="iemail" placeholder="Email">
-            <input type="submit" value="Enviar>">
-        </form>
+        <div class="content">
+            <h1>Increva-se agora <span>na Newslatter</span></h1>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae mollitia nostrum maxime obcaecati, perspiciatis minus veritatis non totam commodi dignissimos asperiores placeat rerum, vitae delectus doloremque, illum ipsa impedit eaque.
+            </p>
+            <form action="form.php">
+                <input type="text" name="nome" id="inome" minlength="3" maxlength="10" placeholder="Nome">
+                <input type="email" name="email" id="iemail" placeholder="Email">
+                <input type="submit" value="Enviar>">
+            </form>
+        </div>
+        <div class="img">
+            <img src="77d0a7c454e658833800528e748edbe9.png" alt="Logo">
+        </div>
     </article>
+    <script src="index.js"></script>
 </body>
 </html>
