@@ -3,6 +3,7 @@
 * {
     margin: 0px;
     padding: 0px;
+    box-sizing: border-box;
 }
 
 body {
@@ -18,19 +19,23 @@ header {
     display: flex;
     justify-content: space-between;
     flex-flow: row nowrap;
+    overflow: hidden;
 }
 
 header h1 {
     width: 170px;
-    height: 50px;
-    margin: 50px 10px 10px 150px;
+    height: 90px;
+    margin: 50px 10px 10px 105px;
     font-weight: 100;
     font-size: 2.5em;
 }
 
 header nav {
+    top: 20px;
     margin-right: 50px;
     display: flex;
+    transition: 1s;
+    position: relative;
 }
 
 header ul {
@@ -41,7 +46,8 @@ header ul {
 header li {
     margin: 40px 0px;
     padding: 10px;
-    
+    transition: .7s;
+    border-radius: 10px;
 }
 
 header a {
@@ -53,9 +59,16 @@ header a {
     padding: 10px;
     border-radius: 10px;
 }
-header a:hover {
+header li:hover {
     background-color: lightgray;
-    color: black;
+    a {
+        color: black;
+        transition: .7s;
+    }
+}
+
+.purple {
+    border: 1px solid blueviolet;
 }
 
 article {
@@ -67,7 +80,7 @@ article h1 {
     font-size: 3em;
     width: 400px;
     color: blueviolet;
-    margin: 100px 100px 0px 150px;
+    margin: 100px 100px 0px 100px;
     line-height: 50px;
 } 
 article h1 span {
@@ -75,12 +88,12 @@ article h1 span {
 }
 article p {
     width: 400px;
-    margin: 30px 100px 100px 150px;
+    margin: 30px 100px 100px 100px;
 }
 
 form input {
     display: block;
-    margin: 20px 150px;
+    margin: 20px 100px;
     border-radius: 15px;
     padding: 15px;
     width: 300px;
@@ -99,6 +112,7 @@ input[type=submit], input[type=submit]::placeholder {
 
 div.img {
     margin-top: 60px;
+    margin-right: 80px;
 }
 header div {
     display: none;
@@ -107,27 +121,47 @@ i#icon {
     display: none;
     width: 0px;
     cursor: pointer;
+    transition: 1s;
 }
 
 @media (max-width: 1289px) {
     header {
         width: 100%;
+        display: block;
+    }
+    header h1 {
+        margin-left: 8%;
     }
     header nav {
         display: none;
-        margin: 180px 0px 0px 0px;
-
+        margin-top: 140px;
+        max-width: calc(615px - 15px);
+        position: relative;
+        right: 50%;
+        left: 50%;
+        transform: translate(-50%, 0%);
+        margin-bottom: 15px;
+    }
+    header nav ul {
+        flex-flow: column wrap;
+        width: 100%;
+        display: flex;
+        justify-content: center;
     }
     header nav ul li {
         background-color: rgb(61, 61, 61);
-        width: 70%;
-        margin: 10px 0px 0px 0px;
-        padding: 0;
+        width: 100%;
+        margin: 0px 0px 10px 0px;
+        padding: 0px;
+        overflow: hidden;
+        display: flex;
+        justify-content: center;
     }
     header nav ul li a {
-        width: 100%;
         display: block;
-        margin: 0 auto;
+        width: calc(100%);
+        padding: 15px;
+        text-align: center;
     }
     header div {
         display: block;
@@ -136,12 +170,28 @@ i#icon {
         display: block;
         font-size: 4em;
         height: 64px;
-    }
-    nav ul {
-        flex-flow: column wrap;
+        position: absolute;
+        margin-left: 85%;
+        top: 60px;
     }
     div.img{
         display: none;
+    }
+    article {
+        width: 100%;
+        
+    }
+    article h1 {
+        margin-left: 8%;
+    }
+    article p {
+        margin-left: 8%;
+    }
+    article form input {
+        margin-left: 8%;
+    }
+    div.content {
+        width: 100%;
     }
 }
 @media (min-width: 1290px) {
