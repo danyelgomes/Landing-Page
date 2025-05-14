@@ -55,7 +55,7 @@ header a {
     text-decoration: none;
     width: 100%;
     font-size: 1.2em;
-
+    transition: .7s;
     padding: 10px;
     border-radius: 10px;
 }
@@ -82,6 +82,7 @@ article h1 {
     color: blueviolet;
     margin: 100px 100px 0px 100px;
     line-height: 50px;
+    transition: .7s;
 } 
 article h1 span {
     color: white;
@@ -121,15 +122,36 @@ i#icon {
     display: none;
     width: 0px;
     cursor: pointer;
-    transition: 1s;
+    color: rgb(162 7 255);
 }
 
+@media (max-width: 500px) {
+    article {
+        h1 {
+            transition: .7s;
+            font-size: 2.3em;
+            width: 85%;
+            margin: 100px  auto 0px auto;
+        }
+        p {
+            width: 75%;
+            font-size: 1em;
+        }
+        form input {
+            width: 70%;
+        }
+    }
+    i#icon {
+        left: -7%;
+    }
+}
 @media (max-width: 1289px) {
     header {
         width: 100%;
         display: block;
     }
     header h1 {
+        transition: .7s;
         margin-left: 8%;
     }
     header nav {
